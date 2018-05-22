@@ -15,11 +15,6 @@ public class BookRepository {
 	public int getBookId() {
 	    return BOOK_ID++;
 	}
-
-	
-	public BookBean save(BookBean bookBean) {
-	    return bookMap.put(bookBean.getId(), bookBean);
-	}
 	
 	public BookBean create(BookBean bookBean) {
 		return bookMap.put(bookBean.getId(), bookBean);
@@ -37,7 +32,7 @@ public class BookRepository {
 	}
 	
 	public List<BookBean> findAll() {
-	    return new ArrayList<BookBean>(bookMap.values());
+	    return new ArrayList<>(bookMap.values());
 	}
 	
 	public BookBean findOne(Integer id) {

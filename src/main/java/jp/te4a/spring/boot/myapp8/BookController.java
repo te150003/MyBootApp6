@@ -15,8 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("books")
 public class BookController {
-    @Autowired
-    BookService bookService;
+   @Autowired
+   BookService bookService;
    @ModelAttribute
    BookForm setUpForm() {
 	   return new BookForm();
